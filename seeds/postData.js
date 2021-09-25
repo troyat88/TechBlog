@@ -13,7 +13,7 @@ const postData = [
       "user_id": 2
     },
     {
-      "name": "First Job",
+      "title": "First Job",
       "content": "I officially feel like a real developer. I was just hired to join a team for an online school!!!!!!!!!",
       "user_id": 3
     }

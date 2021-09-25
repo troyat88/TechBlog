@@ -35,13 +35,14 @@ Comment.init(
         references: {
           model: 'post',
           key: 'id'
-        }
+        },
     },
-
+},  
+  {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'comment'
+    modelName: 'comment',
   }
 );
 
