@@ -1,1 +1,27 @@
 <!-- render specific post, comments, and add comment form-->
+<div class="jumbotron jumbotron-fluid">
+    <div class="card">
+        <div class="card-header">
+            <a href="/project/{{post.id}}">{{post.title}}</a>
+        </div>
+        <div class="card-body">
+            <p>
+                {{post.content}}
+            </p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">By {{user.username}}</small>
+        </div>
+        <div class="card-body">
+            <form class="form new-post">
+                <div class="form-group">
+                    <label for="textarea"></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Add Comment"
+                        rows="1"></textarea>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

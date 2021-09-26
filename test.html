@@ -1,47 +1,99 @@
 <!-- create header and nav, placeholder for 'body'-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
     <title>Tech-Blog</title>
 </head>
+
 <body>
     <div class="container-fluid bg-light">
-    <header>
-        <h1>
-            <a href="/">Tech Blog</a>  
-        </h1>
-    <nav class="nav">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Logout</a>
-            </li>
-          </ul>
-    </nav>
-    </header>
-</div>
-    <main class="container mx-auto container-fluid mt-5">
+        <header>
+            <h1>
+                <a href="/">Tech Blog</a>
+            </h1>
+            <nav class="nav">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <main class="container container-fluid mt-5">
         <!-- Render the sub layout -->
         {{{ body }}}
-      </main>
-      <footer>
-        
-      </footer>
-    
- 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>    
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3>Create a new Post</h3>
+                <div class="card">
+                    <div class="card-header">
+                        <form class="form new-post">
+                            <div class="form-group">
+                                <label for="textarea"></label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Post Title"
+                                    rows="1"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                        <form class="form new-post">
+                            <div class="form-group">
+                                <label for="textarea"></label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                    placeholder="What you thinkin'?" rows="5"></textarea>
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                            </div>
+                        </form>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                      <h1 class="display-6">Your Posts</h1>
+                      <div class="card">
+                        <div class="card-header">
+                            <a href="/project/{{post.id}}">{{post.title}}</a>
+                        </div>
+                        <div class="card-body">
+                         <p>
+                          {{post.content}}   
+                         </p> 
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+            </div>
+        </div>
+
+
+            <script src="./js/login.js"></script>
+    </main>
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
