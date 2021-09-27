@@ -5,7 +5,7 @@ by Troy Atkinson
 ## Description
 CMS style blog built using the MVC paradigm with Handlebars.js, Mysql, sequelize, and bootstrap. 
 
-("assets/Demo.png")
+![product mockup](assets/demo.png)
 
     
 ## Questions
